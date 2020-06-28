@@ -1,6 +1,8 @@
 import java.util.ArrayList;
 import java.util.List;
 
+import static Utils.Messages.printMessage;
+
 public class Publisher implements Observable {
     public String companyName;
     public String releaseGame;
@@ -8,29 +10,36 @@ public class Publisher implements Observable {
 
     public Publisher(String companyName) {
         this.companyName = companyName;
+        printMessage("New game company is created! '" + this.companyName + "' is working!");
     }
 
     public void release(String game) {
         this.releaseGame = game;
-        System.out.println("It's happened! " + this.companyName + " releases new game - " + this.releaseGame + "!");
+        printMessage("It's happened! " + this.companyName + " releases new game - '" + this.releaseGame + "'!");
         notifySubscribers();
     }
 
     @Override
     public void subscribe(Observer observer) {
+        printMessage(this.companyName + " succesfully added '" + observer + "' to subscribers!");
         observers.add(observer);
     }
 
     @Override
     public void unsubscribe(Observer observer) {
+        printMessage(this.companyName + " succesfully removed '" + observer + "' from subscribers!");
         observers.remove(observer);
     }
 
     @Override
     public void notifySubscribers() {
-        for (Observer observer : observers) {
-            System.out.println("Sent notification to: " + observer);
-            observer.update(releaseGame);
+        if (observers.size() == 0) {
+            printMessage("Nobody subscribed to the news of " + this.companyName + "! It's so sad :( We need to hire better advertisement manager...");
+        } else {
+            for (Observer observer : observers) {
+                printMessage("Sent notification to: " + observer);
+                observer.update(releaseGame);
+            }
         }
     }
 }

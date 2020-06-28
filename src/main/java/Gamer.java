@@ -1,33 +1,47 @@
 import java.util.HashSet;
 import java.util.Set;
 
-public class Gamer implements Observer {
-    private String name;
-    private String reaction;
+import static Utils.Messages.printMessage;
 
-    private Set<String> games = new HashSet<>();
+abstract class Gamer implements Observer {
+    String name;
+    String reaction;
+
+    Set<String> games = new HashSet<>();
 
     public Gamer(String name, String reaction) {
-        this.reaction = reaction;
         this.name = name;
+        this.reaction = reaction;
+    }
+
+    protected Gamer() {
     }
 
     public void buyGame(String game) {
         games.add(game);
-        System.out.println(name + " say: " + reaction);
-    }
-
-    @Override
-    public void update(String game) {
-        if (games.contains(game)) {
-            System.out.println("What? They've already released this game ... I don't understand");
-        } else {
-            buyGame(game);
-        }
+        printMessage(name + " say: " + reaction);
     }
 
     @Override
     public String toString() {
         return this.name;
+    }
+
+    public abstract void update(String game);
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getReaction() {
+        return reaction;
+    }
+
+    public void setReaction(String reaction) {
+        this.reaction = reaction;
     }
 }
