@@ -1,4 +1,4 @@
-import static Utils.Messages.printMessage;
+import static utils.Messages.printMessage;
 
 public class HardCoreGamer extends GamerDecorator {
     public HardCoreGamer(Gamer gamer) {

@@ -1,4 +1,4 @@
-package Utils;
+package utils;
 
 public class Messages {
     private static String messages = "";

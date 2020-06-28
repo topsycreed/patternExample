@@ -1,8 +1,8 @@
-import Utils.Messages;
+import utils.Messages;
 import org.junit.Before;
 import org.junit.Test;
 
-import static Constants.Constants.*;
+import static constants.Constants.*;
 import static org.junit.Assert.*;
 
 public class TestGameIndustry {

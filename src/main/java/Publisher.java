@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-import static Utils.Messages.printMessage;
+import static utils.Messages.printMessage;
 
 public class Publisher implements Observable {
     public String companyName;

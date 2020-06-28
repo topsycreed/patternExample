@@ -1,7 +1,7 @@
 import java.util.HashSet;
 import java.util.Set;
 
-import static Utils.Messages.printMessage;
+import static utils.Messages.printMessage;
 
 abstract class Gamer implements Observer {
     String name;
