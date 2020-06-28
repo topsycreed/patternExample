@@ -10,18 +10,24 @@ public class Gamer implements Observer {
     public Gamer(String name, String reaction) {
         this.reaction = reaction;
         this.name = name;
-        System.out.println("New gamer '" + this.name + "' is born! And wanted to install all games!");
+        String text = "New gamer '" + this.name + "' is born! And wanted to install all games!";
+        System.out.println(text);
+        Messages.addText(text);
     }
 
     public void buyGame(String game) {
         games.add(game);
-        System.out.println(name + " say: " + reaction);
+        String text = name + " say: " + reaction;
+        System.out.println(text);
+        Messages.addText(text);
     }
 
     @Override
     public void update(String game) {
         if (games.contains(game)) {
-            System.out.println("What? They've already released this game ... I don't understand");
+            String text = "What? They've already released this game ... I don't understand";
+            System.out.println(text);
+            Messages.addText(text);
         } else {
             buyGame(game);
         }
