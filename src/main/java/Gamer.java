@@ -4,10 +4,11 @@ import java.util.Set;
 import static utils.Messages.printMessage;
 
 abstract class Gamer implements Observer {
-    String name;
-    String reaction;
 
-    Set<String> games = new HashSet<>();
+    protected String name;
+    protected String reaction;
+
+    protected Set<String> games = new HashSet<>();
 
     public Gamer(String name, String reaction) {
         this.name = name;
@@ -26,8 +27,6 @@ abstract class Gamer implements Observer {
     public String toString() {
         return this.name;
     }
-
-    public abstract void update(String game);
 
     public String getName() {
         return name;

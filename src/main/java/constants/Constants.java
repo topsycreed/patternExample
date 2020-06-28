@@ -30,7 +30,7 @@ public class Constants {
             "It's happened! Rockstar releases new game - 'GTA VI'!\n" +
             "Sent notification to: Wade Watts\n" +
             "Wade Watts say: Sure, will buy\n" +
-            "Wade Watts say: I will definitely buy a soundtrack to the game GTA VI\n" +
+            "Wade Watts say: I will definitely buy a soundtrack for the game GTA VI\n" +
             "Sent notification to: Garry Rose\n" +
             "Garry Rose say: I want to pre-order";
 }

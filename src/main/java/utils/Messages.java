@@ -1,22 +1,22 @@
 package utils;
 
 public class Messages {
-    private static String messages = "";
+    private static StringBuffer messages = new StringBuffer();
 
     public static String getText() {
-        return messages;
+        return messages.toString();
     }
 
     public static void addText(String text) {
         if (messages.length() == 0) {
-            messages += text;
+            messages.append(text);
         } else {
-            messages += "\n" + text;
+            messages.append("\n").append(text);
         }
     }
 
     public static void clearText() {
-        messages = "";
+        messages = new StringBuffer();
     }
 
     public static void printMessage(String text) {

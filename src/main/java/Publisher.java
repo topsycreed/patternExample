@@ -4,6 +4,7 @@ import java.util.List;
 import static utils.Messages.printMessage;
 
 public class Publisher implements Observable {
+
     public String companyName;
     public String releaseGame;
     private List<Observer> observers = new ArrayList<>();
