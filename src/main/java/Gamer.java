@@ -7,6 +7,14 @@ abstract class Gamer implements Observer {
 
     Set<String> games = new HashSet<>();
 
+    public Gamer(String name, String reaction) {
+        this.name = name;
+        this.reaction = reaction;
+    }
+
+    protected Gamer() {
+    }
+
     public void buyGame(String game) {
         games.add(game);
         String text = name + " say: " + reaction;

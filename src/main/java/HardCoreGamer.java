@@ -3,6 +3,9 @@ public class HardCoreGamer extends GamerDecorator {
         super(gamer);
         this.name = getName();
         this.reaction = getReaction();
+        String text = "Beware! Gamer called '" + this.name + "' became hardcore player";
+        System.out.println(text);
+        Messages.addText(text);
     }
 
     public void buySoundtrack(String game) {

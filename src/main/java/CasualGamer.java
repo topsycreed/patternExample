@@ -1,5 +1,15 @@
 public class CasualGamer extends Gamer {
 
+    public CasualGamer(String name, String reaction) {
+        super(name, reaction);
+        String text = "New gamer '" + name + "' is born! And wanted to install all games";
+        System.out.println(text);
+        Messages.addText(text);
+    }
+
+    public CasualGamer() {
+    }
+
     @Override
     public void update(String game) {
         if (games.contains(game)) {

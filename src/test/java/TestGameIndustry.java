@@ -15,16 +15,14 @@ public class TestGameIndustry {
         String companyName = "Rockstar";
         String releaseGame = "GTA VI";
         Publisher rockstarGames = new Publisher(companyName);
-        CasualGamer garry = new CasualGamer();
-        garry.setName("Garry Rose");
-        garry.setReaction("I want to pre-order");
-        CasualGamer helen = new CasualGamer();
-        helen.setName("Helen Jack");
-        helen.setReaction("Jesus, it's new game from " + companyName + "!");
+        CasualGamer garry = new CasualGamer("Garry Rose", "I want to pre-order");
+        CasualGamer helen = new CasualGamer("Helen Jack", "Jesus, it's new game from " + companyName + "!");
         rockstarGames.subscribe(garry);
         rockstarGames.subscribe(helen);
         rockstarGames.release(releaseGame);
         assertEquals(Messages.getText(), "New game company is created! 'Rockstar' is working!\n" +
+                "New gamer 'Garry Rose' is born! And wanted to install all games\n" +
+                "New gamer 'Helen Jack' is born! And wanted to install all games\n" +
                 "Rockstar succesfully added 'Garry Rose' to subscribers!\n" +
                 "Rockstar succesfully added 'Helen Jack' to subscribers!\n" +
                 "It's happened! Rockstar releases new game - 'GTA VI'!\n" +
@@ -39,16 +37,14 @@ public class TestGameIndustry {
         String companyName = "Rockstar";
         String releaseGame = "GTA VI";
         Publisher rockstarGames = new Publisher(companyName);
-        CasualGamer garry = new CasualGamer();
-        garry.setName("Garry Rose");
-        garry.setReaction("I want to pre-order");
-        CasualGamer helen = new CasualGamer();
-        helen.setName("Helen Jack");
-        helen.setReaction("Jesus, it's new game from " + companyName + "!");
+        CasualGamer garry = new CasualGamer("Garry Rose", "I want to pre-order");
+        CasualGamer helen = new CasualGamer("Helen Jack", "Jesus, it's new game from " + companyName + "!");
         rockstarGames.subscribe(garry);
         rockstarGames.unsubscribe(garry);
         rockstarGames.release(releaseGame);
         assertEquals(Messages.getText(), "New game company is created! 'Rockstar' is working!\n" +
+                "New gamer 'Garry Rose' is born! And wanted to install all games\n" +
+                "New gamer 'Helen Jack' is born! And wanted to install all games\n" +
                 "Rockstar succesfully added 'Garry Rose' to subscribers!\n" +
                 "Rockstar succesfully removed 'Garry Rose' from subscribers!\n" +
                 "It's happened! Rockstar releases new game - 'GTA VI'!\n" +
@@ -60,18 +56,17 @@ public class TestGameIndustry {
         String companyName = "Rockstar";
         String releaseGame = "GTA VI";
         Publisher rockstarGames = new Publisher(companyName);
-        Gamer wade = new CasualGamer();
-        wade.setName("Wade Watts");
-        wade.setReaction("Sure, will buy");
+        Gamer wade = new CasualGamer("Wade Watts", "Sure, will buy");
         //using decorator to add HardCoreGamer function
         wade = new HardCoreGamer(wade);
-        CasualGamer garry = new CasualGamer();
-        garry.setName("Garry Rose");
-        garry.setReaction("I want to pre-order");
+        CasualGamer garry = new CasualGamer("Garry Rose", "I want to pre-order");
         rockstarGames.subscribe(wade);
         rockstarGames.subscribe(garry);
         rockstarGames.release(releaseGame);
         assertEquals(Messages.getText(), "New game company is created! 'Rockstar' is working!\n" +
+                "New gamer 'Wade Watts' is born! And wanted to install all games\n" +
+                "Beware! Gamer called 'Wade Watts' became hardcore player\n" +
+                "New gamer 'Garry Rose' is born! And wanted to install all games\n" +
                 "Rockstar succesfully added 'Wade Watts' to subscribers!\n" +
                 "Rockstar succesfully added 'Garry Rose' to subscribers!\n" +
                 "It's happened! Rockstar releases new game - 'GTA VI'!\n" +
