@@ -8,21 +8,24 @@ public class Publisher implements Observable {
 
     public Publisher(String companyName) {
         this.companyName = companyName;
+        System.out.println("New game company is created! '" + this.companyName + "' is working!");
     }
 
     public void release(String game) {
         this.releaseGame = game;
-        System.out.println("It's happened! " + this.companyName + " releases new game - " + this.releaseGame + "!");
+        System.out.println("It's happened! " + this.companyName + " releases new game - '" + this.releaseGame + "'!");
         notifySubscribers();
     }
 
     @Override
     public void subscribe(Observer observer) {
+        System.out.println(this.companyName + " succesfully added '" + observer + "' to subscribers!");
         observers.add(observer);
     }
 
     @Override
     public void unsubscribe(Observer observer) {
+        System.out.println(this.companyName + " succesfully removed '" + observer + "' from subscribers!");
         observers.remove(observer);
     }
 

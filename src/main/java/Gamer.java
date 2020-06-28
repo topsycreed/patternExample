@@ -10,6 +10,7 @@ public class Gamer implements Observer {
     public Gamer(String name, String reaction) {
         this.reaction = reaction;
         this.name = name;
+        System.out.println("New gamer '" + this.name + "' is born! And wanted to install all games!");
     }
 
     public void buyGame(String game) {
