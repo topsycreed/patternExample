@@ -1,19 +1,11 @@
 import java.util.HashSet;
 import java.util.Set;
 
-public class Gamer implements Observer {
-    private String name;
-    private String reaction;
+abstract class Gamer implements Observer {
+    String name;
+    String reaction;
 
-    private Set<String> games = new HashSet<>();
-
-    public Gamer(String name, String reaction) {
-        this.reaction = reaction;
-        this.name = name;
-        String text = "New gamer '" + this.name + "' is born! And wanted to install all games!";
-        System.out.println(text);
-        Messages.addText(text);
-    }
+    Set<String> games = new HashSet<>();
 
     public void buyGame(String game) {
         games.add(game);
@@ -23,18 +15,25 @@ public class Gamer implements Observer {
     }
 
     @Override
-    public void update(String game) {
-        if (games.contains(game)) {
-            String text = "What? They've already released this game ... I don't understand";
-            System.out.println(text);
-            Messages.addText(text);
-        } else {
-            buyGame(game);
-        }
-    }
-
-    @Override
     public String toString() {
         return this.name;
+    }
+
+    public abstract void update(String game);
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getReaction() {
+        return reaction;
+    }
+
+    public void setReaction(String reaction) {
+        this.reaction = reaction;
     }
 }
