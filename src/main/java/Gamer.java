@@ -1,6 +1,8 @@
 import java.util.HashSet;
 import java.util.Set;
 
+import static Utils.Messages.printMessage;
+
 abstract class Gamer implements Observer {
     String name;
     String reaction;
@@ -17,9 +19,7 @@ abstract class Gamer implements Observer {
 
     public void buyGame(String game) {
         games.add(game);
-        String text = name + " say: " + reaction;
-        System.out.println(text);
-        Messages.addText(text);
+        printMessage(name + " say: " + reaction);
     }
 
     @Override

@@ -1,25 +1,21 @@
+import static Utils.Messages.printMessage;
+
 public class HardCoreGamer extends GamerDecorator {
     public HardCoreGamer(Gamer gamer) {
         super(gamer);
         this.name = getName();
         this.reaction = getReaction();
-        String text = "Beware! Gamer called '" + this.name + "' became hardcore player";
-        System.out.println(text);
-        Messages.addText(text);
+        printMessage("Beware! Gamer called '" + this.name + "' became hardcore player");
     }
 
     public void buySoundtrack(String game) {
-        String text = this.name + " say: I will definitely buy a soundtrack to the game " + game;
-        System.out.println(text);
-        Messages.addText(text);
+        printMessage(this.name + " say: I will definitely buy a soundtrack to the game " + game);
     }
 
     @Override
     public void update(String game) {
         if (games.contains(game)) {
-            String text = "What? They've already released this game ... I don't understand";
-            System.out.println(text);
-            Messages.addText(text);
+            printMessage("What? They've already released this game ... I don't understand");
         } else {
             buyGame(game);
             buySoundtrack(game);

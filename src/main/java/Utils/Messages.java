@@ -1,3 +1,5 @@
+package Utils;
+
 public class Messages {
     private static String messages = "";
 
@@ -15,5 +17,10 @@ public class Messages {
 
     public static void clearText() {
         messages = "";
+    }
+
+    public static void printMessage(String text) {
+        System.out.println(text);
+        Messages.addText(text);
     }
 }
