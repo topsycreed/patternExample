@@ -33,4 +33,6 @@ public class Constants {
             "Wade Watts say: I will definitely buy a soundtrack for the game GTA VI\n" +
             "Sent notification to: Garry Rose\n" +
             "Garry Rose say: I want to pre-order";
+
+    public static final String LOG_FILE_NAME = "log";
 }
