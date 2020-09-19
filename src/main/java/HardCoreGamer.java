@@ -9,6 +9,13 @@ public class HardCoreGamer extends GamerDecorator {
         printMessage("Beware! Gamer called '" + this.name + "' became hardcore player");
     }
 
+    public HardCoreGamer(String name, String reaction) {
+        super();
+        this.name = name;
+        this.reaction = reaction;
+        printMessage("Beware! Gamer called '" + this.name + "' became hardcore player");
+    }
+
     public void buySoundtrack(String game) {
         printMessage(this.name + " say: I will definitely buy a soundtrack for the game " + game);
     }

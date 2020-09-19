@@ -13,6 +13,8 @@ public class Messages {
         } else {
             messages.append("\n").append(text);
         }
+        char test = 'h';
+        String char1 = String.valueOf(test);
     }
 
     public static void clearText() {

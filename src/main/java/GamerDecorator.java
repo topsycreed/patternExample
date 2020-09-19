@@ -6,6 +6,9 @@ abstract class GamerDecorator extends Gamer {
         this.gamer = gamer;
     }
 
+    public GamerDecorator() {
+    }
+
     public String retrieveName() {
         return gamer.getName();
     }
