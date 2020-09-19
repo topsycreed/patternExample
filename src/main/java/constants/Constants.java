@@ -34,5 +34,19 @@ public class Constants {
             "Sent notification to: Garry Rose\n" +
             "Garry Rose say: I want to pre-order";
 
+    public static final String FACTORY_MESSAGES = "New game company is created! 'Rockstar' is working!\n" +
+            "New gamer 'Garry Rose' is born! And wanted to install all games\n" +
+            "Parents made a 'Garry Rose' from a new brand child factory!\n" +
+            "Beware! Gamer called 'Wade Watts' became hardcore player\n" +
+            "Parents made a 'Wade Watts' from a new brand child factory!\n" +
+            "Rockstar succesfully added 'Wade Watts' to subscribers!\n" +
+            "Rockstar succesfully added 'Garry Rose' to subscribers!\n" +
+            "It's happened! Rockstar releases new game - 'GTA VI'!\n" +
+            "Sent notification to: Wade Watts\n" +
+            "Wade Watts say: Sure, will buy\n" +
+            "Wade Watts say: I will definitely buy a soundtrack for the game GTA VI\n" +
+            "Sent notification to: Garry Rose\n" +
+            "Garry Rose say: I want to pre-order";
+
     public static final String LOG_FILE_NAME = "log";
 }

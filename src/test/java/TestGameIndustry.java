@@ -1,3 +1,4 @@
+import constants.GamerType;
 import utils.Logger;
 import utils.Messages;
 import org.junit.Before;
@@ -18,6 +19,20 @@ public class TestGameIndustry {
         Logger logger = Logger.getInstance();
         logger.info("This is a test info message");
         logger.error("This is a test error message");
+    }
+
+    @Test
+    public void testFactoryMethod() {
+        String companyName = "Rockstar";
+        String releaseGame = "GTA VI";
+        Publisher rockstarGames = new Publisher(companyName);
+        GamerFactory gamerFabric = new GamerFactory();
+        Gamer garry = gamerFabric.produceGamer(GamerType.CASUAL, "Garry Rose", "I want to pre-order");
+        Gamer wade = gamerFabric.produceGamer(GamerType.HARDCORE, "Wade Watts", "Sure, will buy");
+        rockstarGames.subscribe(wade);
+        rockstarGames.subscribe(garry);
+        rockstarGames.release(releaseGame);
+        assertEquals(Messages.getText(), FACTORY_MESSAGES);
     }
 
     @Test
