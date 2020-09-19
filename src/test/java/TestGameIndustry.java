@@ -1,3 +1,4 @@
+import utils.Logger;
 import utils.Messages;
 import org.junit.Before;
 import org.junit.Test;
@@ -13,7 +14,14 @@ public class TestGameIndustry {
     }
 
     @Test
-    public void testSubscription() {
+    public void testLoggerSingleton() {
+        Logger logger = Logger.getInstance();
+        logger.info("This is a test info message");
+        logger.error("This is a test error message");
+    }
+
+    @Test
+    public void testSubscriptionObserver() {
         String companyName = "Rockstar";
         String releaseGame = "GTA VI";
         Publisher rockstarGames = new Publisher(companyName);
@@ -26,7 +34,7 @@ public class TestGameIndustry {
     }
 
     @Test
-    public void testUnSubscription() {
+    public void testUnSubscriptionObserver() {
         String companyName = "Rockstar";
         String releaseGame = "GTA VI";
         Publisher rockstarGames = new Publisher(companyName);
@@ -39,7 +47,7 @@ public class TestGameIndustry {
     }
 
     @Test
-    public void testHardCoreGamer() {
+    public void testHardCoreGamerDecorator() {
         String companyName = "Rockstar";
         String releaseGame = "GTA VI";
         Publisher rockstarGames = new Publisher(companyName);
