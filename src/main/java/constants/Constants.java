@@ -48,5 +48,8 @@ public class Constants {
             "Sent notification to: Garry Rose\n" +
             "Garry Rose say: I want to pre-order";
 
+    public static final String COMMAND_MESSAGES = "GTA VI was released\n" +
+            "GTA VI now on discount";
+
     public static final String LOG_FILE_NAME = "log";
 }

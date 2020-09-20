@@ -1,3 +1,4 @@
+import command.*;
 import constants.GamerType;
 import utils.Logger;
 import utils.Messages;
@@ -9,14 +10,16 @@ import static org.junit.Assert.*;
 
 public class TestGameIndustry {
 
+    Logger logger;
+
     @Before
     public void clearMessages() {
         Messages.clearText();
+        Logger.getInstance();
     }
 
     @Test
     public void testLoggerSingleton() {
-        Logger logger = Logger.getInstance();
         logger.info("This is a test info message");
         logger.error("This is a test error message");
     }
@@ -26,13 +29,29 @@ public class TestGameIndustry {
         String companyName = "Rockstar";
         String releaseGame = "GTA VI";
         Publisher rockstarGames = new Publisher(companyName);
-        GamerFactory gamerFabric = new GamerFactory();
-        Gamer garry = gamerFabric.produceGamer(GamerType.CASUAL, "Garry Rose", "I want to pre-order");
-        Gamer wade = gamerFabric.produceGamer(GamerType.HARDCORE, "Wade Watts", "Sure, will buy");
+        GamerFactory factory = new GamerFactory();
+        Gamer garry = factory.produceGamer(GamerType.CASUAL, "Garry Rose", "I want to pre-order");
+        Gamer wade = factory.produceGamer(GamerType.HARDCORE, "Wade Watts", "Sure, will buy");
         rockstarGames.subscribe(wade);
         rockstarGames.subscribe(garry);
         rockstarGames.release(releaseGame);
         assertEquals(Messages.getText(), FACTORY_MESSAGES);
+    }
+
+    @Test
+    public void testCommand() {
+        String releaseGame = "GTA VI";
+        Controller controller = new Controller();
+        Game game = new Game(releaseGame);
+        Command release = new ReleaseCommand(game);
+        Command discount = new DiscountCommand(game);
+
+        controller.setCommand(release);
+        controller.executeCommand();
+
+        controller.setCommand(discount);
+        controller.executeCommand();
+        assertEquals(Messages.getText(), COMMAND_MESSAGES);
     }
 
     @Test
