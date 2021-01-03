@@ -52,4 +52,23 @@ public class Constants {
             "GTA VI now on discount";
 
     public static final String LOG_FILE_NAME = "log";
+
+    public static final String CAR_ON_MESSAGES = "Engine is on\n" +
+            "HeatedSeats System is on\n" +
+            "StereoSystem is on\n" +
+            "Queen - I'm in love with my car is playing";
+
+    public static final String CAR_PLAY_TRACK_MESSAGES = "Engine is on\n" +
+            "HeatedSeats System is on\n" +
+            "StereoSystem is on\n" +
+            "Queen - I'm in love with my car is playing\n" +
+            "Queen - Bohemian Rhapsody is playing";
+
+    public static final String CAR_OFF_MESSAGES = "Engine is on\n" +
+            "HeatedSeats System is on\n" +
+            "StereoSystem is on\n" +
+            "Queen - I'm in love with my car is playing\n" +
+            "Engine is off\n" +
+            "HeatedSeats System is off\n" +
+            "StereoSystem is off";
 }
