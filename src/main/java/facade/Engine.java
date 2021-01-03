@@ -11,11 +11,9 @@ public class Engine {
 
     void on() {
         printMessage(this.description + " is on");
-//        System.out.println(this.description + " is on");
     }
 
     void off() {
         printMessage(this.description + " is off");
-//        System.out.println(this.description + " is off");
     }
 }

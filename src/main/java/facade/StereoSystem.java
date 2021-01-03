@@ -14,23 +14,19 @@ public class StereoSystem {
 
     void on() {
         printMessage(this.description + " is on");
-//        System.out.println(this.description + " is on");
     }
 
     void off() {
         printMessage(this.description + " is off");
-//        System.out.println(this.description + " is off");
     }
 
     void playTrack(String title) {
         this.trackTitle = title;
         printMessage(this.trackTitle + " is playing");
-//        System.out.println(title + " is playing");
     }
 
     public void pause() {
         printMessage("Track '" + trackTitle + "' were paused");
-//        System.out.println("Track '" + trackTitle + "' were paused");
     }
 
     public String getTrackTitle() {
