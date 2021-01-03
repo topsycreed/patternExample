@@ -71,4 +71,14 @@ public class Constants {
             "Engine is off\n" +
             "HeatedSeats System is off\n" +
             "StereoSystem is off";
+
+    public static final int CURRENCY_TARIFF = 74;
+
+    public static final String DOLLAR_MESSAGES = "Account balance is 0$\n" +
+            "Added 10$ to account\n" +
+            "Account balance is 10$";
+
+    public static final String RUBLES_MESSAGES = "Account balance is 0$\n" +
+            "Added 6$ to account\n" +
+            "Account balance is 6$";
 }
