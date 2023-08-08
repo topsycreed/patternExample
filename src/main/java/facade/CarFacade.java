@@ -1,14 +1,20 @@
 package facade;
 
 public class CarFacade {
-    private Engine engine;
-    private HeatedSeats heatedSeats;
-    private StereoSystem stereoSystem;
+    private final Engine engine;
+    private final HeatedSeats heatedSeats;
+    private final StereoSystem stereoSystem;
 
     public CarFacade(Engine engine, HeatedSeats heatedSeats, StereoSystem stereoSystem) {
         this.engine = engine;
         this.heatedSeats = heatedSeats;
         this.stereoSystem = stereoSystem;
+    }
+
+    public CarFacade() {
+        this.engine = new Engine();
+        this.heatedSeats = new HeatedSeats();
+        this.stereoSystem = new StereoSystem();
     }
 
     public void turnOnCar() {

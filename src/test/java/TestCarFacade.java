@@ -1,7 +1,4 @@
 import facade.CarFacade;
-import facade.Engine;
-import facade.HeatedSeats;
-import facade.StereoSystem;
 import org.junit.Before;
 import org.junit.Test;
 import utils.Logger;
@@ -20,11 +17,7 @@ public class TestCarFacade {
 
     @Test
     public void testCarTurnedOn() {
-        Engine engine = new Engine();
-        HeatedSeats heatedSeats = new HeatedSeats();
-        StereoSystem stereoSystem = new StereoSystem();
-
-        CarFacade carFacade = new CarFacade(engine, heatedSeats, stereoSystem);
+        CarFacade carFacade = new CarFacade();
 
         carFacade.turnOnCar();
         assertEquals(Messages.getText(), CAR_ON_MESSAGES);
@@ -32,11 +25,7 @@ public class TestCarFacade {
 
     @Test
     public void testCarPlayedTrack() {
-        Engine engine = new Engine();
-        HeatedSeats heatedSeats = new HeatedSeats();
-        StereoSystem stereoSystem = new StereoSystem();
-
-        CarFacade carFacade = new CarFacade(engine, heatedSeats, stereoSystem);
+        CarFacade carFacade = new CarFacade();
 
         carFacade.turnOnCar();
         carFacade.playTrack("Queen - Bohemian Rhapsody");
@@ -45,11 +34,7 @@ public class TestCarFacade {
 
     @Test
     public void testCarTurnedOff() {
-        Engine engine = new Engine();
-        HeatedSeats heatedSeats = new HeatedSeats();
-        StereoSystem stereoSystem = new StereoSystem();
-
-        CarFacade carFacade = new CarFacade(engine, heatedSeats, stereoSystem);
+        CarFacade carFacade = new CarFacade();
 
         carFacade.turnOnCar();
         carFacade.turnOffCar();
