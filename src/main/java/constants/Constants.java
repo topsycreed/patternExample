@@ -81,4 +81,11 @@ public class Constants {
     public static final String RUBLES_MESSAGES = "Account balance is 0$\n" +
             "Added 6$ to account\n" +
             "Account balance is 6$";
+
+    public static final String WITHOUT_LAZY_PROXY = "Loaded project from: https://github.com/topsycreed/patternExample/";
+
+    public static final String FULL_PROXY_MSG = "Loaded project from: https://github.com/topsycreed/patternExample/\n" +
+            "Started project from: https://github.com/topsycreed/patternExample/";
+
+    public static final String WITH_LAZY_PROXY = "";
 }
