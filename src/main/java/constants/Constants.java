@@ -88,4 +88,7 @@ public class Constants {
             "Started project from: https://github.com/topsycreed/patternExample/";
 
     public static final String WITH_LAZY_PROXY = "";
+
+    public static final String DEVS_MESSAGES = "Java dev writes Java code\n" +
+            "JavaScript dev writes JavaScript code";
 }
