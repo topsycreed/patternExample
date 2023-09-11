@@ -4,7 +4,7 @@ import bridge.Engine;
 import bridge.GasolineEngine;
 import bridge.SUV;
 import bridge.Sedan;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 public class TestBridgePattern {
 

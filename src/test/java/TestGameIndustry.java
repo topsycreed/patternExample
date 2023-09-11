@@ -1,18 +1,18 @@
 import command.*;
 import constants.GamerType;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 import utils.Logger;
 import utils.Messages;
-import org.junit.Before;
-import org.junit.Test;
 
 import static constants.Constants.*;
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class TestGameIndustry {
 
     Logger logger;
 
-    @Before
+    @BeforeEach
     public void clearMessages() {
         Messages.clearText();
         Logger.getInstance();

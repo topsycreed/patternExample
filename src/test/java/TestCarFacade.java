@@ -1,15 +1,15 @@
 import facade.CarFacade;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 import utils.Logger;
 import utils.Messages;
 
 import static constants.Constants.*;
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class TestCarFacade {
 
-    @Before
+    @BeforeEach
     public void clearMessages() {
         Messages.clearText();
         Logger.getInstance();
