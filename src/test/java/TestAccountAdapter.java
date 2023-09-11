@@ -2,21 +2,17 @@ import adapter.Account;
 import adapter.DollarTransaction;
 import adapter.RubleTransaction;
 import adapter.TransactionAdapter;
-import facade.CarFacade;
-import facade.Engine;
-import facade.HeatedSeats;
-import facade.StereoSystem;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 import utils.Logger;
 import utils.Messages;
 
 import static constants.Constants.*;
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class TestAccountAdapter {
 
-    @Before
+    @BeforeEach
     public void clearMessages() {
         Messages.clearText();
         Logger.getInstance();

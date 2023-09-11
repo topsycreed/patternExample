@@ -1,18 +1,18 @@
 package proxy;
 
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 import proxy.lazyInit.Project;
 import proxy.lazyInit.ProxyProject;
 import proxy.lazyInit.RealProject;
 import utils.Messages;
 
 import static constants.Constants.*;
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class TestLazyProxy {
 
-    @Before
+    @BeforeEach
     public void clearMessages() {
         Messages.clearText();
     }

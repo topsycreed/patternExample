@@ -4,11 +4,11 @@ import factoryMethod.JavaDeveloperFactory;
 import factoryMethod.JavaScriptDeveloperFactory;
 import factoryMethod.old.JavaDeveloper;
 import factoryMethod.old.JavaScriptDeveloper;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 import utils.Messages;
 
 import static constants.Constants.DEVS_MESSAGES;
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class TestFactoryMethodPattern {
 

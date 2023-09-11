@@ -91,4 +91,12 @@ public class Constants {
 
     public static final String DEVS_MESSAGES = "Java dev writes Java code\n" +
             "JavaScript dev writes JavaScript code";
+
+    public static final String JAVA_DEPARTMENT = "Java dev writes Java code\n" +
+            "Java test engineer writes Java tests";
+
+    public static final String JAVASCRIPT_DEPARTMENT = "JavaScript dev writes JavaScript code\n" +
+            "JavaScript test engineer writes JavaScript tests";
+
+    public static final String UNKNOWN_DEPARTMENT = "Such tech stack type doesn't exist but if you will send me a one BTC then I will make it for you";
 }
