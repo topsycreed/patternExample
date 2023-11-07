@@ -1,5 +1,3 @@
-package proxy;
-
 import org.junit.jupiter.api.Test;
 import state.Activity;
 import state.Developer;
